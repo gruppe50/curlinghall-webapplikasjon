@@ -1,4 +1,3 @@
- 
 import style from '../style.module.css';
 import  ResultChart  from './resultChart.js';
 import ElectricityPrice from './electricityPrice';
@@ -6,7 +5,7 @@ import ElectricityPrice from './electricityPrice';
 export default function ResultTable(props) {
 
   const { experiment, resultType, title } = props;
- 
+  
   return (
     <div>
       <table  style={{width: 1400, marginBottom: 20}} className="border-collapse text-sm text-center rtl:text-right text-gray-500">

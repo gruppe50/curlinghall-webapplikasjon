@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from 'react';
 import StatusChart from './statusChart.js'
-import ElectricityPrice from '@/rapport/_components/electricityPrice.js';
+import ElectricityPrice from '@/eksperimenter/resultater/_components/electricityPrice.js';
 
 export default function StatusCharts() {
     const [ measurements, setMeasurements ] = useState([])
@@ -45,7 +45,7 @@ export default function StatusCharts() {
     }, [])
 
     function handleChangePeriod(e) {
-       setPeriod(e.target.value)
+      setPeriod(e.target.value)
     }
 
     return (

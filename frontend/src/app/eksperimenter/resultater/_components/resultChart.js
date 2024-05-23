@@ -55,7 +55,10 @@ export default function ResultChart(props) {
       <LineChart width={500} height={300} data={testData}>
         <CartesianGrid stroke="#ccc" />
         <XAxis dataKey="name" category="category" />
-        <YAxis domain={[props.maxmin[props.resultType].min, props.maxmin[props.resultType].max]}/>
+        <YAxis domain={[
+          props.maxmin[props.resultType].min, props.maxmin[props.resultType].max]}
+          tickFormatter={(tick) => tick.toFixed(3)}
+        />
         <Tooltip />
         <Legend />
         {props.test.testDates.map((t, i) =>
