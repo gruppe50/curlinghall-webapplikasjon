@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer base {
+  .status-table {
+    @apply w-full text-sm text-left rtl:text-right text-gray-500;
+  }
+  .status-table-header {
+    @apply text-xs text-gray-700 uppercase bg-gray-50;
+  }
+  .status-table-row {
+    @apply bg-white border-b;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  /* Sidebar related CSS rules: */
+  .sidebaritem {
+    @apply relative flex items-center py-3.5 px-3 font-medium rounded-md cursor-pointer transition-colors;
+  }
+  .sidebaritem-active {
+    @apply bg-gradient-to-tr from-indigo-200 to-indigo-100 text-indigo-800;
+  }
+  .sidebaritem-inactive {
+    @apply hover:bg-indigo-50;
+  }
+  .sidebar-label {
+    @apply 
+      absolute left-full rounded-md px-2 py-1 ml-6
+      bg-indigo-100 text-indigo-800 text-sm
+      invisible opacity-20 -translate-x-3 transition-all
+      group-hover:visible group-hover:opacity-100 group-hover:translate-x-0
+      z-50
+  }
+}

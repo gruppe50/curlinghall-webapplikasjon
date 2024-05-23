@@ -1,0 +1,37 @@
+.container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1000px;
+    grid-template-rows: 1fr 1fr;
+}
+
+.calendar_container {
+    background-color: lightgray;
+    width: 90%;
+    height: 100%;
+    margin-left: 0;
+    overflow:hidden;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+
+}
+
+.new_test {
+    width: 90%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: 0;
+    background-color: lightgray;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.add_test_timeplan {
+    width: 90%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: 0;
+    background-color: lightgray;
+    grid-column: 1;
+    grid-row: 2;
+}
